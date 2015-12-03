@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title> My app </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/jumbotron-narrow.css')}}" rel="stylesheet" />
+   <link href="{{ url_for('static', filename='css/form.css')}}" rel="stylesheet" />
+   <link href="{{ url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet" />
+   <link href="{{ url_for('static', filename='css/carousel.css')}}" rel="stylesheet" />
+   <script type=text/javascript src="{{url_for('static', filename='js/jquery.js') }}"></script>
+   <script type=text/javascript src="{{url_for('static', filename='js/bootstrap.js') }}"></script>
+   <script type=text/javascript src="{{url_for('static', filename='js/bootstrap.min.js') }}"></script>
+   
+   
+   
+ 
+   
+  </head>
+
+
+ 
+
+ 
+	
+
+ 
+    {% block content %}
+    {% endblock %}
+
+</body>
+<html>

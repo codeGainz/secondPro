@@ -1,0 +1,258 @@
+{%extends "index.html"%}
+{%block content %}
+
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Iron Fam</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="/Workout">Workout</a> </li>
+                <li><a href="/Nutrition">Nutrition</a></li>
+                <li><a href="/Supplements">Supplements</a></li>
+              </ul>
+               <ul class="nav navbar-nav navbar-right">
+            <li><a href="/Login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> &nbsp; Login</a></li>
+            <li><a href="/register"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> &nbsp; register</a></li>
+          </ul>
+               <div class="col-sm-3 col-md-3 pull-right">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>        
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+   
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" <img src="{{url_for('static', filename='img/first.jpg')}}">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>BUILD MUSCLE WITH EXPERT KNOWLEDGE</h1>
+              <p>With the right knowledge you can build and develop the best program for your body </p>
+              <p><a class="btn btn-lg btn-primary" href="/register" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" <img src="{{url_for('static', filename='img/nik.jpg')}}">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>REACH YOUR POTETIAL WITH IronFam.</h1>
+              <p>Here to help you expand your knowledge and help you reach your fitness goals.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" <img src="{{url_for('static', filename='img/gym1.jpg')}}">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>TRAIN HARD HAVE FUN WITH IronFam.</h1>
+              <p>Enjoying what you do is everything</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+  
+
+    <div class="container marketing">
+
+  
+      <div class="row">
+        <div class="col-lg-4">
+		  <img class="img-circle" <img src="{{url_for('static', filename='img/UN_3.jpg')}}" alt="Generic placeholder image" width="140" height="140">
+ 
+          <h2>BUILD MUSCLE</h2
+          <p><a class="btn btn-default" href="/Workout" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-circle" <img src="{{url_for('static', filename='img/meal.jpg')}}" alt="Generic placeholder image" width="140" height="140">
+          <h2> NUTRITION</h2>
+          <p><a class="btn btn-default" href="/Nutrition" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img class="img-circle" <img class="img-circle" <img src="{{url_for('static', filename='img/sup.jpg')}}" alt="Generic placeholder image" width="140" height="140" alt="Generic placeholder image" width="140" height="140">
+          <h2>SUPPLEMENTS</h2>
+          <p><a class="btn btn-default" href="/Supplements" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+
+   
+
+      <hr class="featurette-divider">
+
+      <div class="row">
+            <div class="col-md-6 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" <img src="{{url_for('static', filename='img/bulk.jpg')}}"
+                </a>
+                <h3>
+                    <a href="#">How to gain muscle mass without gaining too
+                    much fat</a>
+                </h3>
+ 
+            </div>
+            <div class="col-md-6 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" <img src="{{url_for('static', filename='img/tri.jpg')}}"
+                </a>
+                <h3>
+                    <a href="#">Exercises to target all triceps heads</a>
+                </h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" <img src="{{url_for('static', filename='img/back.jpg')}}"
+                </a>
+                <h3>
+                    <a href="#">Great exercises for a wider back</a>
+                </h3>
+
+            </div>
+            <div class="col-md-6 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive"  <img src="{{url_for('static', filename='img/nutri1.jpg')}}"
+                </a>
+                <h3>
+                    <a href="#">5 High Nutrient foods</a>
+                </h3>
+
+            </div>
+        </div>
+	
+
+      <hr class="featurette-divider">
+	  
+	   <div class="container">
+
+        <div class="row">
+
+           <div class="col-lg-10 col-lg-offset-1 text-center">
+				<h4><strong>ARTICLES</strong>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+		   
+		   
+		   </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" <img src="{{url_for('static', filename='img/44.jpg')}}">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" <img src="{{url_for('static', filename='img/55.jpg')}}">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" <img src="{{url_for('static', filename='img/66.jpg')}}">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" <img src="{{url_for('static', filename='img/77.jpg')}}">
+                </a>
+            </div>
+	  
+	     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong></strong>
+                    </h4>
+                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
