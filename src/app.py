@@ -36,11 +36,17 @@ def login_required(f):
            flash("Sorry you need to log in first")
            return redirect(url_for('login'))
     return wrap
-	
+
+
 @app.route("/profile")
 @login_required
 def profile():
 	return render_template("profile.html")
+	
+	
+
+	
+
 	
 @app.route("/logout")
 def out():
@@ -48,6 +54,7 @@ def out():
    if ("logout" != None):
        flash ("You are now logged out")
    return redirect (url_for('login')) 
+
 
 @app.route("/Login", methods=["GET", "POST"])
 def login():
@@ -57,25 +64,33 @@ def login():
             error = "Wrong password or username. Please try again."
         else:
           session['logged_in']=True
-          return redirect (url_for("cat"))
+          return redirect (url_for("profile"))
     return render_template("login.html", error=error)
+	
+
+
 
 #@app.route("/Login", methods=["GET", "POST"])
 #def login():
    #error = None
+   #form = RegistrationForm(request.form)
    #conn = data.get_db()
    #if request.method == "POST":
      #username = request.form['username']
-     #password = request.form['password']
-    # sql = "SELECT username from users WHERE username= '"+username+"'"
-    # if (len(conn.cursor().execute(sql).fetchall()) == 0):
-     #error = "wrong username. please use another"
+    #password = request.form['password']
+     #sql = "SELECT username from users WHERE username= '"+username+"'"
+     #if (len(conn.cursor().execute(sql).fetchall()) == 0):
+         #error = "wrong username. please use another"
 
      #else:
-       #session['logge_in']= True
-       ##session['username']= username
-       #return redirect(url_for('profile'))
-	   #return render_template("login.html",form=form)
+	   #sql = "SELECT password from users WHERE password= '"+password+"'"
+	   #if (len(conn.cursor().execute(sql).fetchall()) == 0):
+	       #error = "wrong username. please use another"
+           #session['logged_in']= True
+           #session['username']= username
+           #return redirect(url_for('profile'))
+	   #return render_template('login.html',error=error)
+    
       
 
 
